@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Bienvenue sur mon PorteFolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique, est sed pellentesque vulputate, ligula mi consectetur velit, vel fringilla sapien velit vel neque. Sed viverra, nunc a scelerisque dictum, urna velit scelerisque velit, vel fermentum metus ligula vel neque.</p>
+<body class="body_accueil">
+    <header>      
+            <h1>Mon PortFolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>  
+            <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>           
     </header>
+    <script src="script.js"></script>
     <main>
         <section id="parcours">
+            <img src="src/images/profil.png" alt="">
             <h1>
-                Mon PorteFolio
+                Hamidou DJIRE
             </h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique, est sed pellentesque vulputate, ligula mi consectetur velit, vel fringilla sapien velit vel neque. Sed viverra, nunc a scelerisque dictum, urna velit scelerisque velit, vel fermentum metus ligula vel neque.
+                Jeune ambitieux, passionné par les Nouvelles technologies d'informations et de la communication notamment l'intelligence artificielle, l'innovation et surtout la créativite, les récherches, la lecture et la curiosité de toujours essayer de nouvelles choses.
             </p>
         </section>
         <section id="competences">
@@ -56,10 +60,13 @@
                 <input type="Messages" placeholder="Votre Message"/>
                 <button type="submit">Envoyez</button>
             </form>
+            <a href="test.html">Voir mon cv</a>
         </section>
     </main>
     <footer>
-        <p>�� 2021 - PorteFolio. Tous droits réservés.</p>
+        <div class="footer">
+            <p>�� 2021 - PorteFolio. Tous droits réservés.</p>
+        </div>
     </footer>
 </body>
 </html>

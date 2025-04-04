@@ -1,0 +1,975 @@
+/* General Styles */
+.body_cv {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.body_accueil {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+} 
+ footer{
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+ }
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ /* Section Parcours */
+#parcours {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#parcours h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Section Compétences (3 cartes alignées) */
+#competences {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#competences > div {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+#competences > div:hover {
+    transform: translateY(-5px);
+}
+
+#competences h2 {
+    color: #3498db;
+    text-align: center;
+}
+
+#competences img {
+    display: block;
+    margin: 0 auto 15px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+ /* Section Contact */
+ #contact {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#contact button {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#contact button:hover {
+    background: #2980b9;
+}
+#contact a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Bouton Dark/Light Mode */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    color: var(--text-color);
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.frame {
+    position: relative;
+    width: 349px;
+    height: 818px;
+    background: #FFFFFF;
+}
+
+/* Rectangle Elements */
+.rectangle {
+    position: absolute;
+}
+
+.left-sidebar {
+    width: 162px;
+    height: 818px;
+    left: 0px;
+    top: 0px;
+    background: #D9D9D9;
+}
+
+.black-header {
+    width: 162px;
+    height: 214px;
+    right: 187px;
+    bottom: 604px;
+    background: #000000;
+    border-radius: 0px 0px 80px 80px;
+}
+
+.black-footer {
+    width: 145px;
+    height: 452px;
+    left: 8px;
+    top: 366px;
+    background: #000000;
+    border-radius: 80px 80px 0px 0px;
+}
+
+/* Profile Picture */
+.ellipse {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.profile-pic-outer {
+    width: 141px;
+    height: 137px;
+    left: 9px;
+    top: 66px;
+    background: #FFFFFF;
+}
+
+.profile-pic-inner {
+    width: 129.54px;
+    height: 126.04px;
+    left: 6px;
+    top: 6px;
+    background: url('src/images/profil.png');
+    background-size: cover;
+}
+
+/* Name and Title */
+.name {
+    position: absolute;
+    width: 144.26px;
+    height: 23px;
+    left: 20px;
+    top: 26px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.title {
+    position: absolute;
+    width: 153.72px;
+    height: 11px;
+    left: 17px;
+    top: 47px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+/* Contact Section */
+.contact-title {
+    position: absolute;
+    width: 94px;
+    height: 23px;
+    left: 39px;
+    top: 240px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.contact-info {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6px;
+    line-height: 7px;
+    color: #000000;
+}
+
+.phone {
+    width: 56px;
+    height: 11px;
+    left: 36px;
+    top: 277px;
+}
+
+.email {
+    width: 107px;
+    height: 11px;
+    left: 36px;
+    top: 304px;
+}
+
+.address {
+    width: 86px;
+    height: 11px;
+    left: 36px;
+    top: 334px;
+}
+
+
+/* Contact Icon */
+.contact-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 13px;
+    top: 234px;
+}
+
+.contact-icon .icon-bg {
+    width: 20px;
+    height: 20px;
+    background: #000000;
+}
+
+.contact-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/contact.png');
+    background-size: cover;
+}
+
+
+/* contact-info phone Icon */
+.ccontact-info-phone {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 15px;
+    top: 274px;
+}
+
+.contact-info-phone .icon-img-phone {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 15px;
+    top: 274px;
+    background: url('src/icones/phone.png');
+    background-size: cover;
+}
+
+
+/* contact-info email Icon */
+.contact-info-email {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 15px;
+    top: 302px;
+}
+
+.contact-info-email .icon-img-email {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/email.png');
+    background-size: cover;
+}
+
+/* contact-info address Icon */
+.contact-info-address {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 15px;
+    top: 330px;
+}
+
+.contact-info-address .icon-img-address {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/location.png');
+    background-size: cover;
+}
+
+/* Education Section */
+.education-title {
+    position: absolute;
+    width: 76px;
+    height: 16px;
+    left: 45px;
+    top: 423px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.education-content {
+    position: absolute;
+    width: 121px;
+    height: 113px;
+    left: 27px;
+    top: 445px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+/* Education Icon */
+.education-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    top: 418px;
+}
+
+.education-icon .icon-bg {
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+}
+
+.education-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/education.png');
+    background-size: cover;
+}
+
+/* Skills Section */
+.skills-title {
+    position: absolute;
+    width: 98px;
+    height: 16px;
+    left: 47px;
+    top: 540px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.skills-content {
+    position: absolute;
+    width: 117px;
+    height: 222px;
+    left: 20px;
+    top: 564px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+/* Skills Icon */
+.skills-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 21px;
+    top: 536px;
+}
+
+.skills-icon .icon-bg {
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+}
+
+.skills-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/connaissance.png');
+    background-size: cover;
+}
+
+/* About Me Section */
+.about-me-title {
+    position: absolute;
+    width: 88px;
+    height: 15px;
+    left: 214px;
+    top: 32px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.about-me-content {
+    position: absolute;
+    width: 154px;
+    height: 57px;
+    left: 186px;
+    top: 59px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: justify;
+    color: #000000;
+}
+
+/* About Me Icon */
+.about-me-icon {
+    position: absolute;
+    width: 20px;
+    height: 19.82px;
+    left: 185px;
+    top: 32px;
+}
+
+.about-me-icon .icon-bg {
+    width: 20px;
+    height: 19.82px;
+    background: #000000;
+}
+
+.about-me-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/propos.png');
+    background-size: cover;
+}
+
+/* Experience Section */
+.experience-title {
+    position: absolute;
+    width: 113px;
+    height: 11px;
+    left: 214px;
+    top: 195px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.experience-item-1 {
+    position: absolute;
+    width: 155px;
+    height: 44px;
+    left: 185px;
+    top: 220px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: justify;
+    color: #000000;
+}
+
+.experience-desc-1 {
+    position: absolute;
+    width: 154px;
+    height: 95px;
+    left: 186px;
+    top: 289px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: justify;
+    color: #000000;
+}
+
+.experience-item-2 {
+    position: absolute;
+    width: 152px;
+    height: 39px;
+    left: 185px;
+    top: 414px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: justify;
+    color: #000000;
+}
+
+.experience-desc-2 {
+    position: absolute;
+    width: 154px;
+    height: 46px;
+    left: 185px;
+    top: 478px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    text-align: justify;
+    color: #000000;
+}
+
+/* Experience Icon */
+.experience-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 186px;
+    top: 193px;
+}
+
+.experience-icon .icon-bg {
+    width: 20px;
+    height: 20px;
+    background: #000000;
+}
+
+.experience-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/image.png');
+    background-size: cover;
+}
+
+/* Competences Section */
+.competences-title {
+    position: absolute;
+    width: 74px;
+    height: 12px;
+    left: 214px;
+    top: 601px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.competence-item {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 12px;
+    color: #000000;
+}
+
+.flutter {
+    width: 52px;
+    height: 9px;
+    left: 187px;
+    top: 619px;
+}
+
+.mysql {
+    width: 57px;
+    height: 9px;
+    left: 272px;
+    top: 618px;
+    text-align: justify;
+}
+
+.firebase {
+    width: 52px;
+    height: 9px;
+    left: 187px;
+    top: 637px;
+}
+
+.postgres {
+    width: 57px;
+    height: 9px;
+    left: 273px;
+    top: 637px;
+    text-align: justify;
+}
+
+.java {
+    width: 52px;
+    height: 9px;
+    left: 187px;
+    top: 654px;
+}
+
+/* Competence Icons */
+.competence-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 186px;
+    top: 595px;
+}
+
+.competence-icon .icon-bg {
+    width: 20px;
+    height: 20px;
+    background: #000000;
+}
+
+.competence-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/competence.png');
+    background-size: cover;
+}
+
+/* Languages Section */
+.languages-title {
+    position: absolute;
+    width: 46px;
+    height: 11px;
+    left: 215px;
+    top: 699px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.bambara {
+    position: absolute;
+    width: 132px;
+    height: 96px;
+    left: 186px;
+    top: 722px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    color: #000000;
+}
+.français {
+    position: absolute;
+    width: 132px;
+    height: 96px;
+    left: 186px;
+    top: 736px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    color: #000000;
+}
+.anglais {
+    position: absolute;
+    width: 132px;
+    height: 96px;
+    left: 186px;
+    top: 748px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    color: #000000;
+}
+
+/* Languages Icon */
+.languages-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 187px;
+    top: 693px;
+}
+
+.languages-icon .icon-bg {
+    width: 20px;
+    height: 20px;
+    background: #000000;
+}
+
+.languages-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/langue.png');
+    background-size: cover;
+}
+
+.languages-icon-2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 187px;
+    top: 691px;
+}
+
+.languages-icon-2 .icon-img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/langue.png');
+    background-size: cover;
+}
+
+/* Passions Section */
+.passions-title {
+    position: absolute;
+    width: 49px;
+    height: 11px;
+    left: 295px;
+    top: 697px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.passion-item {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 12px;
+    color: #000000;
+}
+
+.lecture {
+    width: 53px;
+    height: 12px;
+    left: 277px;
+    top: 722px;
+}
+
+.voyage {
+    width: 72px;
+    height: 12px;
+    left: 276px;
+    top: 736px;
+}
+
+.recherche {
+    width: 72px;
+    height: 12px;
+    left: 277px;
+    top: 748px;
+}
+
+/* Passions Icon */
+.passions-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 271px;
+    top: 694px;
+}
+
+.passions-icon .icon-bg {
+    width: 20px;
+    height: 20px;
+    background: #000000;
+}
+
+.passions-icon .icon-img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background: url('src/icones/passion.png');
+    background-size: cover;
+}
+
+/* Skill Bars */
+.image {
+    position: absolute;
+    background: url('image.png');
+    background-size: cover;
+}
+
+.image-1 {
+    width: 38px;
+    height: 12px;
+    left: 223px;
+    top: 618px;
+}
+
+.image-2 {
+    width: 38px;
+    height: 12px;
+    left: 302px;
+    top: 616px;
+}
+
+.image-3 {
+    width: 38px;
+    height: 12px;
+    left: 225px;
+    top: 637px;
+}
+
+.image-4 {
+    width: 40px;
+    height: 12px;
+    left: 302px;
+    top: 638px;
+}
+
+.image-5 {
+    width: 40px;
+    height: 12px;
+    left: 222px;
+    top: 654px;
+}
+
+@media (width: 768px) {
+    /* Adjustments for larger screens */
+    /*... */
+    nav{
+        display: none;
+    }
+}
