@@ -1,30 +1,63 @@
+// function download (){
+//     const telecharge = document.getElementById('m');
+//     const fichier = {
+//         margin: [5, 5, 5, 5],
+//         filename: 'CV_Hamidou_DJIRE.pdf',
+//         image: { type: "jpeg", quality: 0.98 },
+//         html2canvas: { scale: 2 ,
+//             useCORS: true,
+//             logging: true,
+//         },
+//         jsPDF: { 
+//             unit: 'mm',
+//             format: 'a4',
+//             orientation: 'portrait',
+//         }
 
-        const toggleBtn = document.querySelector('.theme-toggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+//     };
+//     html2pdf().set(fichier).from(telecharge).save();
 
-        // Vérifie le mode système au chargement
-        if (prefersDarkScheme.matches) {
-            document.body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️';
-        }
-
-        // Basculer entre les modes
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDark = document.body.classList.contains('dark-mode');
-            toggleBtn.textContent = isDark ? '☀️' : '🌙';
-            
-            // Sauvegarder la préférence (optionnel)
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-
-        // Charger la préférence sauvegardée (optionnel)
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️';
-        } else if (currentTheme === 'light') {
-            document.body.classList.remove('dark-mode');
-            toggleBtn.textContent = '🌙';
-        }
+// }
+function download() {
+    const element = document.getElementById('mon_cv');
     
+    if (!element) {
+        alert('Élément introuvable avec l’ID "mon_cv"');
+        return;
+    }
+
+    const options = {
+        margin: [5, 5, 5, 5],
+        filename: 'CV_Hamidou_DJIRE.pdf',
+        image: { 
+            type: 'jpeg', 
+            quality: 0.98 
+        },
+        html2canvas: { 
+            scale: 2,
+            useCORS: true,
+            logging: true,
+            allowTaint: false, // Mieux de laisser false sauf besoin spécifique
+            scrollX: 50,
+            scrollY: 70,
+        },
+        jsPDF: { 
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'portrait'
+        }
+    };
+
+    html2pdf()
+        .set(options)
+        .from(element)
+        .save()
+        .then(() => {
+            console.log('PDF généré avec succès');
+        })
+        .catch((error) => {
+            console.error('Erreur lors de la génération du PDF:', error);
+            alert('Une erreur est survenue lors de la génération du PDF');
+        });
+}
+document.getElementById('download').addEventListener('click', download);

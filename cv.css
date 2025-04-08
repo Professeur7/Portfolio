@@ -128,12 +128,54 @@ main{
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
 }
 
 #contact button:hover {
     background: #2980b9;
+
 }
+#interaction-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 15px; /* Espacement égal entre boutons */
+}
+
+#interaction-section button {
+    flex: 1; /* Prend toute la largeur disponible */
+    min-width: 120px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0c1022 0%, #03050c 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#interaction-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #2541b2 0%, #4a6cf7 100%);
+}
+
+ /* Style des icônes */
+ .button-icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
 #contact a {
     display: inline-block;
     margin-top: 20px;
@@ -187,7 +229,7 @@ nav a:hover {
     position: relative;
     background: #FFFFFF;
     width: 349px; /* ou 100% pour le responsive */
-    height: 818px; /* optionnel si hauteur fixe nécessaire */
+    /*height: 818px;  optionnel si hauteur fixe nécessaire */
     max-width: 100%; /* Empêche le débordement sur mobile */
     margin: 0 auto; /* Centrage */
     padding: 10mm; /* Marge intérieure */
@@ -239,13 +281,13 @@ nav a:hover {
     background: #FFFFFF;
 }
 
-.profile-pic-inner {
+
+.profile-pic-inner img{
+    position: absolute;
     width: 129.54px;
     height: 126.04px;
     left: 6px;
     top: 6px;
-    background: url('src/images/profil.png');
-    background-size: cover;
 }
 
 /* Name and Title */
@@ -339,14 +381,12 @@ nav a:hover {
     background: #000000;
 }
 
-.contact-icon .icon-img {
+.contact-icon-img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/contact.png');
-    background-size: cover;
 }
 
 
@@ -359,14 +399,12 @@ nav a:hover {
     top: 274px;
 }
 
-.contact-info-phone .icon-img-phone {
+.contact-info-phone .icon-img-phone img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 15px;
     top: 274px;
-    background: url('src/icones/phone.png');
-    background-size: cover;
 }
 
 
@@ -379,14 +417,12 @@ nav a:hover {
     top: 302px;
 }
 
-.contact-info-email .icon-img-email {
+.contact-info-email .icon-img-email img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/email.png');
-    background-size: cover;
 }
 
 /* contact-info address Icon */
@@ -398,14 +434,12 @@ nav a:hover {
     top: 330px;
 }
 
-.contact-info-address .icon-img-address {
+.contact-info-address .icon-img-address img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/location.png');
-    background-size: cover;
 }
 
 /* Education Section */
@@ -453,14 +487,12 @@ nav a:hover {
     background: #FFFFFF;
 }
 
-.education-icon .icon-img {
+.education-icon .icon-img img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/education.png');
-    background-size: cover;
 }
 
 /* Skills Section */
@@ -507,14 +539,12 @@ nav a:hover {
     background: #FFFFFF;
 }
 
-.skills-icon .icon-img {
+.skills-icon .icon-img img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/connaissance.png');
-    background-size: cover;
 }
 
 /* About Me Section */
@@ -562,14 +592,12 @@ nav a:hover {
     background: #000000;
 }
 
-.about-me-icon .icon-img {
+.about-me-icon .icon-img img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/propos.png');
-    background-size: cover;
 }
 
 /* Experience Section */
@@ -662,14 +690,12 @@ nav a:hover {
     background: #000000;
 }
 
-.experience-icon .icon-img {
+.experience-icon .icon-img img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/image.png');
-    background-size: cover;
 }
 
 /* Competences Section */
@@ -749,14 +775,12 @@ nav a:hover {
     background: #000000;
 }
 
-.competence-icon .icon-img {
+.competence-icon .icon-img img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/competence.png');
-    background-size: cover;
 }
 
 /* Languages Section */
@@ -829,14 +853,12 @@ nav a:hover {
     background: #000000;
 }
 
-.languages-icon .icon-img {
+.languages-icon .icon-img img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/langue.png');
-    background-size: cover;
 }
 
 .languages-icon-2 {
@@ -847,14 +869,12 @@ nav a:hover {
     top: 691px;
 }
 
-.languages-icon-2 .icon-img {
+.languages-icon-2 .icon-img img{
     position: absolute;
     width: 20px;
     height: 20px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/langue.png');
-    background-size: cover;
 }
 
 /* Passions Section */
@@ -918,52 +938,75 @@ nav a:hover {
     background: #000000;
 }
 
-.passions-icon .icon-img {
+.passions-icon .icon-img img{
     position: absolute;
     width: 16px;
     height: 16px;
     left: 2px;
     top: 2px;
-    background: url('src/icones/passion.png');
-    background-size: cover;
+}
+
+/* button */
+#get-back {
+    position: absolute;
+    width: 72px;
+    height: 12px;
+    left: 10px;
+    top: 830px;
+}
+
+#download {
+    position: absolute;
+    width: 72px;
+    height: 12px;
+    left: 277px;
+    top: 830px;
+}
+
+#color-changing-btn {
+    position: absolute;
+    width: 72px;
+    height: 12px;
+    left: 147px;
+    top: 830px;
 }
 
 /* Skill Bars */
 .image {
     position: absolute;
-    background: url('image.png');
+    background-color:black;
     background-size: cover;
 }
 
-.image-1 {
+.progressing-bar1 img{
     width: 38px;
     height: 12px;
     left: 223px;
     top: 618px;
 }
 
-.image-2 {
+.progressing-bar2 img{
     width: 38px;
     height: 12px;
     left: 302px;
     top: 616px;
 }
 
-.image-3 {
+.progressing-bar3 img{
     width: 38px;
     height: 12px;
     left: 225px;
     top: 637px;
 }
 
-.image-4 {
+.progressing-bar4 img{
     width: 40px;
     height: 12px;
     left: 302px;
     top: 638px;
 }
 
-.image-5 {
+.progressing-bar5 img{
     width: 40px;
     height: 12px;
     left: 222px;
@@ -978,16 +1021,46 @@ nav a:hover {
   }
 
 @media print{
-    .body_cv{
+    body *{
+        visibility: hidden;
+    }
+
+    #frame, #frame *{
+        visibility: visible;
+    }
+
+    #frame{
+       
+        width: 100% !important;
+        margin: 0 !important;
+        max-width: 210mm;
+        box-sizing: border-box;
+        padding: 0 !important;
+       
+    }
+
+    #left-sidebar-setion, #main-section {
+        float: none;
+        width: 100%;
+    }
+
+    /* .body_cv *{
         display: grid;
         grid-template-columns: 1fr;
         margin: 0 auto;
-    }
-    .frame {
+    } */
+    /* .frame {
         width: 100%;
         height: 100%;
     }
     .frame{
         width: 50%;
+    } */
+}
+
+@media (max-width: 600px) {
+    #interaction-section {
+        flex-direction: column;
+        gap: 10px;
     }
 }
